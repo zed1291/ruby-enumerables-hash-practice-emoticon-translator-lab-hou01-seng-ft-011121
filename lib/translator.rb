@@ -19,7 +19,6 @@ def load_library path
      ordered_emoticons[meanings] = {:english => symbols[0], :japanese => symbols[1]}
    end
    ordered_emoticons
- end
 end
 
 def get_japanese_emoticon
