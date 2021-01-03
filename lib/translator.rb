@@ -13,7 +13,7 @@ def load_library path
 end
 
 def get_english_meaning path, emoticon
-  emoticons = YAML.load_file(path)
+  # emoticons = YAML.load_file(path)
   load_library path
 end
 
