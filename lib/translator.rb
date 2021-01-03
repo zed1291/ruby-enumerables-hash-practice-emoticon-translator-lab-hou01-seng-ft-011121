@@ -4,7 +4,10 @@ def load_library path
   emoticons = YAML.load_file(path)
   ordered_emoticons = {}
    emoticons.each do |meanings, symbols|
-     ordered_emoticons[meanings] = {:english => symbols[0], :japanese => symbols[1]}
+     ordered_emoticons[meanings] = {
+      :english => symbols[0],
+      :japanese => symbols[1]
+    }
    end
    ordered_emoticons
 end
