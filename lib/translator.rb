@@ -12,7 +12,7 @@ def load_library path
    ordered_emoticons
 end
 
-def get_english_meaning path emoticon
+def get_english_meaning path, emoticon
   emoticons = YAML.load_file(path)
 end
 
