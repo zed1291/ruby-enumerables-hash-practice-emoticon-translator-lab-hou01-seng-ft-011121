@@ -17,11 +17,7 @@ def get_english_meaning path, emoticon
 
   output = nil
   emoticon_hash.each do |meanings, nested_hash|
-    # p "meanings: #{meanings}"
-    # p nested_hash
     nested_hash.each do |language, symbol|
-      # p "language: #{language}"
-      # p "symbol: #{symbol}"
       if language == :japanese
         if symbol == emoticon
           output = meanings
@@ -41,11 +37,7 @@ def get_japanese_emoticon path, emoticon
   meaning = nil
   output = nil
   emoticon_hash.each do |meanings, nested_hash|
-    # p "meanings: #{meanings}"
-    # p nested_hash
     nested_hash.each do |language, symbol|
-      # p "language: #{language}"
-      # p "symbol: #{symbol}"
       if language == :english
         if symbol == emoticon
           meaning = meanings
