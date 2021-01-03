@@ -14,11 +14,11 @@ def load_library path
   #        :japanese => "(＾ｖ＾)"
   #     }
   #  }
-  # emoticons.each do |meaning, symbols|
-  #   hash[meaning][:english] << emoticons[0]
-  #   hash[meaning][:japanese] << emoticons[1]
-  # end
-  # emoticons
+  emoticons.each do |meaning, symbols|
+    hash[meaning][:english] << emoticons[0]
+    hash[meaning][:japanese] << emoticons[1]
+  end
+  emoticons
 end
 
 def get_japanese_emoticon
