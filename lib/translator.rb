@@ -35,13 +35,27 @@ def get_english_meaning path, emoticon
   output
 end
 
-def get_japanese_emoticon
-  # code goes here
-end
+def get_japanese_emoticon path, emoticon
+  emoticon_hash = load_library path
 
-# it "calls on #load_library and gives it the argument of the file path" do
-#   emoticon_hash = load_library("./lib/emoticons.yml")
-#
-#   file_path = "./lib/emoticons.yml"
-#   expect(self).to receive(:load_library).with(file_path).and_return(emoticon_hash)
-#   answer = get_english_meaning("./lib/emoticons.yml", "=D")
+  meaning = nil
+  output = nil
+  emoticon_hash.each do |meanings, nested_hash|
+    # p "meanings: #{meanings}"
+    # p nested_hash
+    nested_hash.each do |language, symbol|
+      # p "language: #{language}"
+      # p "symbol: #{symbol}"
+      if language == :english
+        if symbol == emoticon
+          meaning = meanings
+          output = emoticon_hash[meaning][:japanese]
+        end
+      end
+    end
+  end
+  if output == nil
+    return "Sorry, that emoticon was not found"
+  end
+  output
+end
