@@ -16,7 +16,8 @@ def load_library path
   #  }
   hash = {}
   emoticons.each do |meaning, symbols|
-    hash[meaning][:english] << symbols
+    hash[meaning][:english] << symbols[0]
+    hash[meaning][:japanese] << symbols[1]
 end
 
 def get_japanese_emoticon
