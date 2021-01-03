@@ -2,18 +2,6 @@ require 'yaml'
 
 def load_library path
   emoticons = YAML.load_file(path)
-  #this is the data
-  # happy:
-  # - ":)"
-  # - "(＾ｖ＾)"
-
-  #this is what i want
-  # {
-  #     'happy' => {
-  #        :english => ":)",
-  #        :japanese => "(＾ｖ＾)"
-  #     }
-  #  }
   ordered_emoticons = {}
    emoticons.each do |meanings, symbols|
      ordered_emoticons[meanings] = {:english => symbols[0], :japanese => symbols[1]}
