@@ -22,7 +22,7 @@ end
 
 # it "calls on #load_library and gives it the argument of the file path" do
 #   emoticon_hash = load_library("./lib/emoticons.yml")
-# 
+#
 #   file_path = "./lib/emoticons.yml"
 #   expect(self).to receive(:load_library).with(file_path).and_return(emoticon_hash)
 #   answer = get_english_meaning("./lib/emoticons.yml", "=D")
