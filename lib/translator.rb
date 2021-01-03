@@ -4,6 +4,13 @@ require 'yaml'
 def load_library
   # code goes here
   load('.lib/emoticons.yml')
+
+  hash = {
+      'happy' => {
+         :english => ":)",
+         :japanese => "(＾ｖ＾)"
+      }
+   }
 end
 
 def get_japanese_emoticon
