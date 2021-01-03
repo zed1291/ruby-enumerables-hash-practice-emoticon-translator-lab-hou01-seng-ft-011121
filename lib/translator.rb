@@ -30,7 +30,7 @@ def get_english_meaning path, emoticon
     end
   end
   if output == nil
-    return "Sorry bout that, I don't know what that is."
+    return "Sorry, that emoticon was not found"
   end
   output
 end
